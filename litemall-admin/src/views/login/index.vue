@@ -18,37 +18,17 @@
         <el-input v-model="loginForm.password" :type="passwordType" name="password" auto-complete="on" tabindex="2" show-password placeholder="管理员密码" @keyup.enter.native="handleLogin" />
       </el-form-item>
 
-      <!-- <el-form-item prop="code">
+      <el-form-item prop="code">
         <span class="svg-container">
           <svg-icon icon-class="lock" />
         </span>
         <el-input v-model="loginForm.code" auto-complete="off" name="code" tabindex="2" placeholder="验证码" style="width: 60%" @keyup.enter.native="handleLogin" />
         <div class="login-code">
-          <img :src="codeImg" @click="getCode">
+          <img :src="codeImg" @click="getCode"/>
         </div>
-      </el-form-item> -->
-
+      </el-form-item>
       <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">登录</el-button>
-
-      <div style="position:relative">
-        <div class="tips">
-          <span> 超级管理员用户名: admin123</span>
-          <span> 超级管理员用户名：admin123</span>
-        </div>
-        <div class="tips">
-          <span> 商城管理员用户名: mall123</span>
-          <span> 商城管理员用户名：mall123</span>
-        </div>
-        <div class="tips">
-          <span> 推广管理员用户名: promotion123</span>
-          <span> 推广管理员用户名：promotion123</span>
-        </div>
-      </div>
     </el-form>
-
-    <div class="copyright">
-      Copyright © 2022 xxx.com 版权所有 <a href="https://github.com/linlinjava/litemall">沪ICP备xxx号</a>
-    </div>
   </div>
 </template>
 
@@ -94,10 +74,10 @@ export default {
   },
   created() {
     this.getCode()
-    // window.addEventListener('hashchange', this.afterQRScan)
+    window.addEventListener('hashchange', this.afterQRScan)
   },
   destroyed() {
-    // window.removeEventListener('hashchange', this.afterQRScan)
+    window.removeEventListener('hashchange', this.afterQRScan)
   },
   methods: {
     getCode() {
