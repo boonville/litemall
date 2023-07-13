@@ -17,7 +17,6 @@
         </span>
         <el-input v-model="loginForm.password" :type="passwordType" name="password" auto-complete="on" tabindex="2" show-password placeholder="管理员密码" @keyup.enter.native="handleLogin" />
       </el-form-item>
-
       <el-form-item prop="code">
         <span class="svg-container">
           <svg-icon icon-class="lock" />
