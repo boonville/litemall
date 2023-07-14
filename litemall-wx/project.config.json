@@ -33,7 +33,7 @@
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
     "ignoreUploadUnusedFiles": true,
-    "condition": false
+    "condition": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.4.0",
